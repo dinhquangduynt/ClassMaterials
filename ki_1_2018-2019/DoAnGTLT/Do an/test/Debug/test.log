@@ -1,0 +1,5 @@
+﻿  SV.cpp
+d:\đồ án gtlt\do an\test\sv.cpp(89): warning C4018: '<': signed/unsigned mismatch
+d:\đồ án gtlt\do an\test\sv.cpp(96): warning C4018: '<': signed/unsigned mismatch
+d:\đồ án gtlt\do an\test\sv.cpp(108): warning C4018: '<': signed/unsigned mismatch
+  test.vcxproj -> D:\đồ án GTLT\Do an\Debug\test.exe

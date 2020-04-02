@@ -1,0 +1,18 @@
+
+============cua duy===============
+1---CLI(command line interface):a text-only link between a computer and its operator
+
+2-----VM (virtual machine) : a software program which mimics the performance of one or more hardware devices in order to run software independently of the actual hardware
+3---file permissions: a set of strict rules for controlling read, write, and execute access to a file or directory
+4----Upgrade : The process used to bring an operating system up to date with technology advances
+
+5-----Palm OS: An operating system that runs on Palm handhelds and other thirdy party devices.
+6-----Emulation Card: A card that provides the ability for the computer to run a program that was designed for a different operating system.
+7*------Window Embedded CE: An operating system designed for devies such as digital cameras, secrity robots, intelligent applicances, gaming devices, GPS, andset-top boxes.
+8------Administrative Account: A collection of information that determines which files you can access and which settings you use.
+9-------Graphics: Used by a Graphical User Interface to help the user navigate within the computer system
+10-----sysadmin (system administrator): a person who maintains a computer server network, including patches, upgrades, and security related duties
+11------File System: Determines how the operating system will stores files on a disk.
+12---office suite: a collection of integrated productivity programs normally including at least: spreadsheet, word processor, database, and presentation maker.
+
+his word means that Determines how the operating system will stores files on a disk. so, what's this?

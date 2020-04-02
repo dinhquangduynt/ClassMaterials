@@ -1,0 +1,103 @@
+﻿#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+struct ThueBao {
+	string TenDonVi;
+	string DiaChi;
+	string SoDienThoai;
+};
+
+struct QuanLyThueBao {
+	int n;
+	ThueBao *DB;
+	string TenTinh;
+};
+
+struct QuanLyTinh {
+	int n;
+	QuanLyThueBao *QL;
+};
+
+string DocTenCuaMotTinh(ifstream &FileIn) {
+	string tentinh;
+	getline(FileIn, tentinh);
+	return tentinh;
+}
+
+void DocThongTinCuaMotThueBao(ifstream &FileIn, ThueBao &dv) {
+	getline(FileIn, dv.TenDonVi, ',');
+	FileIn.seekg(1, 1);
+	getline(FileIn, dv.DiaChi, ',');
+	FileIn.seekg(1, 1);
+	getline(FileIn, dv.SoDienThoai);
+}
+
+void DocDanhSachThueBao(ifstream &FileIn, QuanLyThueBao &ds) {
+	for (int i = 0; i < ds.n; i++) {
+		DocThongTinCuaMotThueBao(FileIn, ds.DB[i]);
+	}
+}
+
+
+void XuatThongTinCuaMotThueBao(ThueBao tb) {
+	cout << "Ten don vi: " << tb.TenDonVi << endl;
+	cout << "Dia chi: " << tb.DiaChi << endl;
+	cout << "So dien thoai: " << tb.SoDienThoai << endl;
+}
+
+void XuatDanhSachThueBao(QuanLyThueBao ql) {
+	for (int i = 0; i < ql.n; i++) {
+		cout << ql.TenTinh << endl;
+		cout << "Thue bao thu " << i + 1 << endl;
+		XuatThongTinCuaMotThueBao(ql.DB[i]);
+		cout << "\n\n";
+	}
+}
+
+int XacDinhSoPhanTuCuaMang(ifstream &FileIn) {
+	int n;
+	FileIn >> n;
+	return n;
+}
+
+void DocTinh(ifstream &FileIn, QuanLyThueBao &ql) {
+	ql.TenTinh = DocTenCuaMotTinh(FileIn);
+	ql.n = XacDinhSoPhanTuCuaMang(FileIn);
+	ql.DB = new ThueBao[ql.n];
+	FileIn.ignore();			
+	DocDanhSachThueBao(FileIn, ql);
+	//XuatDanhSachThueBao(ql);
+}
+void DocDanhSachTinh(ifstream &FileIn, QuanLyTinh &ds) {
+	for (int i = 0; i < ds.n; i++) {
+		DocTinh(FileIn, ds.QL[i]);
+	}
+}
+
+int main() {
+	QuanLyTinh qlt;
+	ifstream FileIn;
+	FileIn.open("INPUT.txt", ios_base::in);
+	qlt.n = XacDinhSoPhanTuCuaMang(FileIn);
+	qlt.QL = new QuanLyThueBao[qlt.n];
+	FileIn.ignore();
+	DocDanhSachTinh(FileIn, qlt);
+
+	for (int i = 0; i < qlt.n; i++) {
+		cout << endl;
+		cout << qlt.QL[i].TenTinh;
+		for (int j = 0; j < qlt.QL[i].n; j++) {
+			cout << endl;
+			cout << qlt.QL[i].DB[j].DiaChi;
+		}
+	}
+
+	FileIn.close();
+	system("pause");
+	return 0;
+}
+
+
+

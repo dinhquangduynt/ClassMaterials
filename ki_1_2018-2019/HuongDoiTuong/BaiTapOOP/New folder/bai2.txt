@@ -1,0 +1,100 @@
+//
+//MyString MyString::operator & (const MyString &s)
+//{
+//	MyString noisau(*this);
+//	noisau.data += s.n;
+//	for (int i = 0; i < s.n; i++)
+//	{
+//		noisau.data[i] += s.data[i];
+//	}
+//	return noisau;
+//}
+//
+//MyString & MyString::operator=(const MyString &s)
+//{
+//	delete[] data;
+//	this->n = s.n;
+//	data = new char[n];
+//	for (int i = 0; i < n; i++)
+//	{
+//		data[i] = s.data[i];
+//	}
+//	return *this;
+//}
+//
+//bool MyString::operator==(const MyString &s)
+//{
+//	if (n != s.n) return false;
+//	else
+//	{
+//		for (int i = 0; i < s.n; i++)
+//		{
+//			if (data[i] != s.data[i])
+//				return false;
+//		 	break;
+//		}
+//	}
+//	
+//	return true;
+//}
+//
+//bool MyString::operator!=(const MyString &s)
+//{
+//	//if()
+//	return !(*this == s);
+//}
+//
+//bool MyString::operator>(const MyString &s)
+//{
+//	if (n >= s.n)
+//	{
+//		for (int i = 0; i < s.n; i++)
+//		{
+//			if (data[i] < s.data[i])
+//				return false;
+//			break;
+//		}
+//	}
+//	if (n < s.n)
+//	{
+//		for (int i = 0; i < n; i++)
+//		{
+//			if (this->data[i] < s.data[i])
+//				return false;
+//			break;
+//		}
+//	}
+//
+//	return true;
+//}
+//
+//bool MyString::operator>=(const MyString &s)
+//{
+//	if (!(*this < s))
+//		return true;
+//	return false;
+//}
+//
+//bool MyString::operator<(const MyString &s)
+//{
+//	if (!(*this > s))
+//		return true;
+//	return false;
+//}
+//
+//bool MyString::operator<=(const MyString &s)
+//{
+//	if (!(*this > s))
+//		return true;
+//	return false;
+//}
+//
+////istream & operator>>(istream &i, MyString &s)
+////{
+////	i.ignore();
+////	
+////	gets_s(i, s.data);
+////	return i;
+////}
+//
+//

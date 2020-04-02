@@ -1,0 +1,5 @@
+﻿  Source.cpp
+d:\đồ án gtlt\test\test\source.cpp(89): warning C4018: '<': signed/unsigned mismatch
+d:\đồ án gtlt\test\test\source.cpp(96): warning C4018: '<': signed/unsigned mismatch
+d:\đồ án gtlt\test\test\source.cpp(108): warning C4018: '<': signed/unsigned mismatch
+  test.vcxproj -> D:\đồ án GTLT\test\Debug\test.exe

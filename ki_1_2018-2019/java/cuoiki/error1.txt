@@ -1,0 +1,10 @@
+dong 1 sai dinh dang TRE0000x
+dong 1 sai dinh dang Nam/Nu
+dong 2 sai dinh dang TRE0000x
+dong 3 sai dinh dang TRE0000x
+dong 3 sai dinh dang YYYY/MM/dd
+dong 4 sai dinh dang TRE0000x
+dong 5 sai dinh dang TRE0000x
+dong 6 sai dinh dang TRE0000x
+dong 6 sai dinh dang YYYY/MM/dd
+dong 6 sai dinh dang Nam/Nu

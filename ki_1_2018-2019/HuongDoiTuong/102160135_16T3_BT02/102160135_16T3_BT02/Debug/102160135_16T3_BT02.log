@@ -1,0 +1,6 @@
+﻿  MyString.cpp
+e:\102160135_16t3_bt02\102160135_16t3_bt02\mystring.cpp(73): warning C4552: '&': result of expression not used
+e:\102160135_16t3_bt02\102160135_16t3_bt02\mystring.cpp(189): warning C4129: ' ': unrecognized character escape sequence
+e:\102160135_16t3_bt02\102160135_16t3_bt02\mystring.cpp(132): warning C4715: 'MyString::operator>': not all control paths return a value
+e:\102160135_16t3_bt02\102160135_16t3_bt02\mystring.cpp(154): warning C4715: 'MyString::operator>=': not all control paths return a value
+  102160135_16T3_BT02.vcxproj -> E:\102160135_16T3_BT02\Debug\102160135_16T3_BT02.exe

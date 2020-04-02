@@ -1,0 +1,8 @@
+event
+
+1. g?i func t? XML
+ public void nameFen (View  )
+
+2. t?o 1 event --> set to view
+
+3. t?o 1 event ( chung )<--- View (dang kí d? tham gia)

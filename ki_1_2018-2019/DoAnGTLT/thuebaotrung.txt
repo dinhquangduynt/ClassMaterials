@@ -1,0 +1,46 @@
+//=======================================tim kiem thue bao trung=======================================
+void LietKeTatCaThueBaoTrungTrongMotTinh(QuanLyTinh listTinh) {
+
+	cout << "Tat ca thue bao bi trung: " << endl;
+	for (int i = 0; i < listTinh.n; i++) {
+		int sothuebaotrung = 0;
+		cout << endl;
+		cout << listTinh.listTinh[i].TenTinh;
+		cout << endl;
+		for (int j = 0; j < listTinh.listTinh[i].n - 1; j++) {
+			int kiemtra = 0;
+			for (int k = j+1; k < listTinh.listTinh[i].n; k++)	
+			{
+				if (listTinh.listTinh[i].listThueBaoTungTinh[j].SoDienThoai == listTinh.listTinh[i].listThueBaoTungTinh[k].SoDienThoai)
+				{
+					// in thong tin cac thue bao bi trung
+					if (sothuebaotrung == 0) {
+						cout << listTinh.listTinh[i].listThueBaoTungTinh[j].TenDonVi << "   |   "
+							<< listTinh.listTinh[i].listThueBaoTungTinh[j].DiaChi << "   |   "							
+							<< listTinh.listTinh[i].listThueBaoTungTinh[j].SoDienThoai << endl;
+
+					}
+					if (kiemtra == 0) {
+						cout << listTinh.listTinh[i].listThueBaoTungTinh[k].TenDonVi << "   |   "
+							<< listTinh.listTinh[i].listThueBaoTungTinh[k].DiaChi << "   |   "
+							<< listTinh.listTinh[i].listThueBaoTungTinh[k].SoDienThoai << endl;
+					}
+					
+					kiemtra = kiemtra + 1;					
+					sothuebaotrung = sothuebaotrung + 1;
+				}
+			}
+				
+		}
+		/*if (sothuebaotrung != 0)
+		{
+			cout << "\nVui long xoa " << sothuebaotrung 
+				<< " thue bao bi trung trong tinh " 
+				<< listTinh.listTinh[i].TenTinh << endl;
+		}*/
+		if(sothuebaotrung==0)
+			cout << "\nKhong co thue bao nao bi trung trong tinh " 
+			<< listTinh.listTinh[i].TenTinh << endl;
+
+	}
+}

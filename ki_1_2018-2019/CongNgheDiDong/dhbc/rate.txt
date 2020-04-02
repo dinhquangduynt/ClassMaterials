@@ -1,0 +1,105 @@
+﻿T?o activity DialogRateActivity
+
+layout:
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".DialogRateActivity">
+
+    <TextView
+        android:id="@+id/tvRate"
+        android:text="Xin m?i b?n x?p h?ng ?ng d?ng"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRate"
+        android:layout_centerHorizontal="true"
+        android:numStars="5"
+        android:stepSize="1"
+        android:theme="@style/RatingBar"/>
+
+    <LinearLayout
+        android:layout_below="@id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/huy_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rating_bar"
+            android:layout_centerHorizontal="true"
+            android:textColor="@drawable/custom_color"
+            android:background="@drawable/button_kich"
+            android:text="H?y"/>
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rating_bar"
+            android:layout_centerHorizontal="true"
+            android:textColor="@drawable/custom_color"
+            android:background="@drawable/button_kich"
+            android:text="G?i"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+main:
+
+package com.hgk.giakhanh.dhbc;
+
+import android.app.Dialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RatingBar;
+import android.widget.Toast;
+
+public class DialogRateActivity extends AppCompatActivity {
+    RatingBar ratingBar;
+    Button btnSubmit, btnHuy;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dialog_rate);
+
+        AnhXa();
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnHuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
+    }
+
+    private void AnhXa() {
+        ratingBar = (RatingBar) findViewById(R.id.rating_bar);
+        btnSubmit = (Button) findViewById(R.id.submit_btn);
+        btnHuy = (Button) findViewById(R.id.huy_btn);
+    }
+}

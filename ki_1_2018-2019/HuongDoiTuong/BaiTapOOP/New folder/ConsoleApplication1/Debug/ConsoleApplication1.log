@@ -1,0 +1,10 @@
+﻿  NhanVien.cpp
+f:\baitaphdt\bt1\consoleapplication1\consoleapplication1\nhanvien.cpp(51): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+f:\baitaphdt\bt1\consoleapplication1\consoleapplication1\nhanvien.cpp(88): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  List.cpp
+f:\baitaphdt\bt1\consoleapplication1\consoleapplication1\list.cpp(230): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Date.cpp
+  ConsoleApplication1.cpp
+  Generating Code...
+  ConsoleApplication1.vcxproj -> F:\BaiTapHDT\bt1\ConsoleApplication1\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> F:\BaiTapHDT\bt1\ConsoleApplication1\Debug\ConsoleApplication1.pdb (Full PDB)

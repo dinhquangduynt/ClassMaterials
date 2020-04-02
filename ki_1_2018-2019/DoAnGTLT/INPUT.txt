@@ -1,0 +1,27 @@
+file txt
+4
+Ten tinh 1
+4
+Ten don vi 1, Dia chi 1, So dien thoai 1
+Ten don vi 2, Dia chi 2, So dien thoai 2
+Ten don vi 3, Dia chi 3, So dien thoai 3
+Ten don vi 4, Dia chi 4, So dien thoai 4
+Ten tinh 2
+4
+Ten don vi 1, Dia chi 1, So dien thoai 1
+Ten don vi 2, Dia chi 2, So dien thoai 2
+Ten don vi 3, Dia chi 3, So dien thoai 3
+Ten don vi 4, Dia chi 4, So dien thoai 4
+Ten tinh 3
+4
+Ten don vi 1, Dia chi 1, So dien thoai 1
+Ten don vi 2, Dia chi 2, So dien thoai 2
+Ten don vi 3, Dia chi 3, So dien thoai 3
+Ten don vi 4, Dia chi 4, So dien thoai 4
+Ten tinh 4
+5
+Ten don vi 1, Dia chi 1, So dien thoai 1
+Ten don vi 2, Dia chi 2, So dien thoai 2
+Ten don vi 3, Dia chi 3, So dien thoai 3
+Ten don vi 4, Dia chi 4, So dien thoai 4
+Ten don vi 4, Dia chi 4, So dien thoai 4

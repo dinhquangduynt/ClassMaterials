@@ -1,0 +1,42 @@
+5
+Da Nang
+7
+FPT, Lien Chieu, 0236111111
+Viettel, Thanh Khe, 0236123765
+VNPT, Hai Chau, 0236888976
+Vinaphone, Hoa Vang, 0236876456
+Mobifone, Cam Le, 0236987123
+Gameloft, Son Tra, 0236986245
+Vinmec, Ngu Hanh Son, 0236745263
+Quang Nam
+6
+Lang Bich Hoa, Tam Ky, 0235764983
+Thap My Son, Duy Xuyen, 0235000987
+Thaco, Nui Thanh, 0235980764
+Giao Thuy, Dai Loc, 0235873094
+Bien Ha My, Dien Ban, 0235123876
+Pho Co Hoi An, Hoi An, 0235123871
+Quang Ngai
+6
+Dao Ly Son, Ly Son, 025511876
+Traphaco, Binh Son, 0255376564
+Pinaco, Tra Bong, 0255098809
+Yanmar, Son Tinh, 0255998712
+Qik Hair, Tu Nghia, 0255132987
+CocaCola, Mo Duc, 02551239555
+Binh Dinh
+5
+Pepsi, Quy Nhon, 0256111876
+Seven Up, An Lao, 0256098123
+Revive, Hoai An, 0256199764
+C2, Phu My, 02561987654
+Tra Xanh, Phu Cat, 025610911
+Ha Noi
+7
+Tiger, Ba Dinh, 024765483
+Heneiken, Hoan Kiem, 024876453
+333, Dong Da, 024987012
+Huda Hue, Tay Ho, 024112765
+Buu dien, Cau Giay, 024777893
+Benh vien, Tu Liem, 024999333
+Cong an, Dong Anh, 024111876

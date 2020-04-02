@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script language="JavaScript">
+		function doimau()
+		{
+			var bien=document.f1.t1.value
+			document.bgColor=bien
+		}
+
+		function thongbao()
+		{
+			alert("Ban da roi khoi truong password")
+
+		}
+	</script>
+</head>
+<body>
+ <form name="f1" method="post" action="xulilogin.*">
+ 	<input type="text" name="t1" value="text">
+ 	<input type="password" name="p1" onblur="thongbao()">
+ 	<input type="button" name="b1" value="OK" onclick="doimau()">
+ 	<input type="reset" name="r1" value="Reset">
+ </form>
+</body>
+</html>

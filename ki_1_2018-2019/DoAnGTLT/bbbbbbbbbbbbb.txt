@@ -1,0 +1,196 @@
+﻿#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+struct ThueBao {
+	string TenDonVi;
+	string DiaChi;
+	string SoDienThoai;
+};
+
+struct QuanLyThueBao {
+	int n;
+	ThueBao *listThueBaoTungTinh;
+	string TenTinh;
+};
+
+struct QuanLyTinh {
+	int n;
+	QuanLyThueBao *listTinh;
+};
+
+string DocTenCuaMotTinh(ifstream &FileIn) {
+	string tentinh;
+	getline(FileIn, tentinh);
+	return tentinh;
+}
+
+void DocThongTinCuaMotThueBao(ifstream &FileIn, ThueBao &dv) {
+	getline(FileIn, dv.TenDonVi, ',');
+	FileIn.seekg(1, 1);
+	getline(FileIn, dv.DiaChi, ',');
+	FileIn.seekg(1, 1);
+	getline(FileIn, dv.SoDienThoai);
+}
+
+void DocDanhSachThueBao(ifstream &FileIn, QuanLyThueBao &ds) {
+	for (int i = 0; i < ds.n; i++) {
+		DocThongTinCuaMotThueBao(FileIn, ds.listThueBaoTungTinh[i]);
+	}
+}
+
+
+void XuatThongTinCuaMotThueBao(ThueBao tb) {
+	cout << "Ten don vi: " << tb.TenDonVi << endl;
+	cout << "Dia chi: " << tb.DiaChi << endl;
+	cout << "So dien thoai: " << tb.SoDienThoai << endl;
+}
+
+void XuatDanhSachThueBao(QuanLyThueBao listTinh) {
+	for (int i = 0; i < listTinh.n; i++) {
+		cout << listTinh.TenTinh << endl;
+		cout << "Thue bao thu " << i + 1 << endl;
+		XuatThongTinCuaMotThueBao(listTinh.listThueBaoTungTinh[i]);
+		cout << "\n\n";
+	}
+}
+
+int XacDinhSoPhanTuCuaMang(ifstream &FileIn) {
+	int n;
+	FileIn >> n;
+	return n;
+}
+
+void DocTinh(ifstream &FileIn, QuanLyThueBao &listTinh) {
+	listTinh.TenTinh = DocTenCuaMotTinh(FileIn);
+	listTinh.n = XacDinhSoPhanTuCuaMang(FileIn);
+	listTinh.listThueBaoTungTinh = new ThueBao[listTinh.n];
+	FileIn.ignore();			
+	DocDanhSachThueBao(FileIn, listTinh);
+	//XuatDanhSachThueBao(listTinh);
+}
+void DocDanhSachTinh(ifstream &FileIn, QuanLyTinh &ds) {
+	for (int i = 0; i < ds.n; i++) {
+		DocTinh(FileIn, ds.listTinh[i]);
+	}
+}
+
+void LietKeThueBaoTungTinh(QuanLyTinh listTinht, int Tinh) {
+	cout << "Danh sach thue bao tinh: " << listTinht.listTinh[Tinh].TenTinh << endl;
+	for (int i = 0; i < listTinht.listTinh[Tinh].n; i++) {
+		cout << "Thue bao thu " << i+1 << ":" << endl;
+		cout << listTinht.listTinh[Tinh].listThueBaoTungTinh[i].DiaChi <<"  |  "<<listTinht.listTinh[Tinh].listThueBaoTungTinh[i].SoDienThoai<<"  |  "<< listTinht.listTinh[Tinh].listThueBaoTungTinh[i].TenDonVi << endl;
+	}
+}
+
+void LietKeTatCaThueBao(QuanLyTinh listTinh) {
+	cout << "Tat ca thue bao: " << endl;
+	for (int i = 0; i < listTinh.n; i++) {
+		cout << endl;
+		cout << listTinh.listTinh[i].TenTinh;
+		for (int j = 0; j < listTinh.listTinh[i].n; j++) {
+			cout << endl;
+			cout << listTinh.listTinh[i].listThueBaoTungTinh[j].DiaChi << "   |   " << listTinh.listTinh[i].listThueBaoTungTinh[j].SoDienThoai << "   |   " << listTinh.listTinh[i].listThueBaoTungTinh[j].TenDonVi << endl;
+		}
+	}
+}
+int dem = 0;
+void TimKiemThueBaoTheoSoDienThoai(QuanLyTinh listTinh, string sdt) {
+	for (int i = 0; i < listTinh.n; i++) {
+		for (int j = 0; j < listTinh.listTinh[i].n; j++) {
+			if (listTinh.listTinh[i].listThueBaoTungTinh[j].SoDienThoai == sdt) {
+				cout << "Tinh: " << listTinh.listTinh[i].TenTinh << endl;
+				cout << listTinh.listTinh[i].listThueBaoTungTinh[j].DiaChi << "  |  " << listTinh.listTinh[i].listThueBaoTungTinh[j].SoDienThoai << "  |  " << listTinh.listTinh[i].listThueBaoTungTinh[j].TenDonVi << endl;
+				dem = dem + 1;
+			}
+		}
+	}
+	if (dem == 0) {
+		cout << "Khong tim thay thue bao so dien thoai ban tim!!" << endl;
+	}
+}
+
+void TimKiemThueBaoTheoTenDonVi(QuanLyTinh listTinh, string tdv) {
+	for (int i = 0; i < listTinh.n; i++) {
+		for (int j = 0; j < listTinh.listTinh[i].n; j++) {
+			if (listTinh.listTinh[i].listThueBaoTungTinh[j].TenDonVi == tdv) {
+				cout << "Tinh: " << listTinh.listTinh[i].TenTinh << endl;
+				cout << listTinh.listTinh[i].listThueBaoTungTinh[j].DiaChi << "  |  " << listTinh.listTinh[i].listThueBaoTungTinh[j].SoDienThoai << "  |  " << listTinh.listTinh[i].listThueBaoTungTinh[j].TenDonVi << endl;
+				dem = dem + 1;
+			}
+		}
+	}
+	if (dem == 0) {
+		cout << "Khong tim thay thue bao co ten don vi ban tim!!" << endl;
+	}
+}
+
+int main() {
+	int choice;
+	string str;
+	QuanLyTinh listTinh;
+	ifstream FileIn;
+	FileIn.open("INPUT.txt", ios_base::in);
+	listTinh.n = XacDinhSoPhanTuCuaMang(FileIn);
+	listTinh.listTinh = new QuanLyThueBao[listTinh.n];
+	FileIn.ignore();
+	DocDanhSachTinh(FileIn, listTinh);
+	do {
+		cout << endl;
+		cout << "+=====================MENU======================+" << endl;
+		cout << "|-----------------------------------------------|" << endl;
+		cout << "|-----------------------------------------------|" << endl;
+		cout << "|-----1. Liet ke tat ca thue bao cua tinh 1-----|" << endl;
+		cout << "|-----2. Liet ke tat ca thue bao cua tinh 2-----|" << endl;
+		cout << "|-----3. Liet ke tat ca thue bao cua tinh 3-----|" << endl;
+		cout << "|-----4. Liet ke tat ca thue bao cua tinh 4-----|" << endl;
+		cout << "|-----5. Liet ke tat ca thue bao cua tinh 5-----|" << endl;
+		cout << "|-----6. Liet ke tat ca thue bao----------------|" << endl;
+		cout << "|-----7. Tim kiem thue bao theo So dien thoai---|" << endl;
+		cout << "|-----8. Tim kiem thue bao theo Ten don vi------|" << endl;
+		cout << "|-----0. Thoat----------------------------------|" << endl;
+		cout << "|-----------------------------------------------|" << endl;
+		cout << "|------------CHON LUA CHON CUA BAN--------------|" << endl;
+		cout << "+===============================================+" << endl;
+		cin >> choice;
+		switch (choice)
+		{
+		case 1:
+			LietKeThueBaoTungTinh(listTinh, 0);
+			break;
+		case 2:
+			LietKeThueBaoTungTinh(listTinh, 1);
+			break;
+		case 3:
+			LietKeThueBaoTungTinh(listTinh, 2);
+			break;
+		case 4:
+			LietKeThueBaoTungTinh(listTinh, 3);
+			break;
+		case 5:
+			LietKeThueBaoTungTinh(listTinh, 4);
+			break;
+		case 6:
+			LietKeTatCaThueBao(listTinh);
+			break;
+		case 7:
+			cout << "Nhap so dien thoai ban muon tim: ";
+			cin.ignore();
+			getline(cin, str);
+			TimKiemThueBaoTheoSoDienThoai(listTinh, str);
+		case 8:
+			cout << "Nhap ten don vi ban muon tim: ";
+			cin.ignore();
+			getline(cin, str);
+			TimKiemThueBaoTheoTenDonVi(listTinh, str);
+		}
+	}while(choice != 0);
+
+	FileIn.close();
+	system("pause");
+	return 0;
+}
+
+
+

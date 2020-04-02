@@ -1,0 +1,21 @@
+[y,Fs]=audioread('C:\Users\kieungu\Documents\Custom Office Templates\XU LY TIN HIEU SO\BUUCUT.wav');
+max_value=max(abs(y));
+y=y/max_value;
+y=y(1:(Fs*.03));
+N=length(y);
+t=linspace(0,0.03,N);
+subplot(2,1,1);
+plot(t,y);
+xlabel('Thoi gian (s)');
+ylabel('Bien do ');
+title('Tin hieu tren mien thoi gian');
+y1= y(1:length(y)); 
+t1= t(1:length(y1));
+subplot(2,1,2);
+title('Hinh ve cac dinh duoc tim');
+xlabel('Tan so (Hz)');
+ylabel('Bien do');
+findpeaks(y1,t1,'MinPeakProminence',1.4,'Annotate','extents');
+[pks,locs]= findpeaks(y1,t1,'MinPeakProminence',1.4);
+T0=locs(2)-locs(1);
+F0=1/T0

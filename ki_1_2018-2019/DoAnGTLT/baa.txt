@@ -1,0 +1,10 @@
+CLI(command line interface)
+file permissions
+Upgrade
+Palm OS
+Emulation Card
+Administrative Account
+sysadmin (system administrator)
+File System
+VM (virtual machine)
+Graphics:

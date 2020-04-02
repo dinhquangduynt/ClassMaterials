@@ -1,0 +1,10 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (BT02.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  MyString.cpp
+c:\users\asus\desktop\bt02\bt02\mystring.cpp(73): warning C4552: '&': result of expression not used
+  Source.cpp
+c:\users\asus\desktop\bt02\bt02\source.cpp(4): warning C4101: 'kt': unreferenced local variable
+c:\users\asus\desktop\bt02\bt02\source.cpp(4): warning C4101: 'lc': unreferenced local variable
+  Generating Code...
+c:\users\asus\desktop\bt02\bt02\mystring.cpp(132): warning C4715: 'MyString::operator>': not all control paths return a value
+c:\users\asus\desktop\bt02\bt02\mystring.cpp(154): warning C4715: 'MyString::operator>=': not all control paths return a value
+  BT02.vcxproj -> C:\Users\Asus\Desktop\BT02\Debug\102160135_16T3_BT02.exe

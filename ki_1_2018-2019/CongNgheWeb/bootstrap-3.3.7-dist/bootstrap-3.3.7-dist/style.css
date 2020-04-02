@@ -1,0 +1,8 @@
+#menu-main li{
+	float: left;
+}
+
+ol,ul {
+	margin: 0;
+	list-style: none;
+}

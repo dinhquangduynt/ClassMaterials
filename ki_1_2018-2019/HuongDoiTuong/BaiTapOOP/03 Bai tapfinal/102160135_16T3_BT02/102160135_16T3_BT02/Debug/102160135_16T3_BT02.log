@@ -1,0 +1,10 @@
+﻿  MyString.cpp
+d:\bài tập oop\102160135_16t3_bt02\102160135_16t3_bt02\mystring.cpp(73): warning C4552: '&': result of expression not used
+d:\bài tập oop\102160135_16t3_bt02\102160135_16t3_bt02\mystring.cpp(189): warning C4129: ' ': unrecognized character escape sequence
+  Source.cpp
+d:\bài tập oop\102160135_16t3_bt02\102160135_16t3_bt02\source.cpp(4): warning C4101: 'kt': unreferenced local variable
+d:\bài tập oop\102160135_16t3_bt02\102160135_16t3_bt02\source.cpp(4): warning C4101: 'lc': unreferenced local variable
+  Generating Code...
+d:\bài tập oop\102160135_16t3_bt02\102160135_16t3_bt02\mystring.cpp(132): warning C4715: 'MyString::operator>': not all control paths return a value
+d:\bài tập oop\102160135_16t3_bt02\102160135_16t3_bt02\mystring.cpp(154): warning C4715: 'MyString::operator>=': not all control paths return a value
+  102160135_16T3_BT02.vcxproj -> D:\bài tập oop\102160135_16T3_BT02\Debug\102160135_16T3_BT02.exe

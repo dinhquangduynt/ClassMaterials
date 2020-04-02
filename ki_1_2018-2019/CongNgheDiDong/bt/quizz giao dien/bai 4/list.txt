@@ -1,0 +1,35 @@
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <ListView
+         android:id="@+id/lv_text"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+     </ListView>
+ </RelativeLayout>
+
+
+--------------------------------------------------------
+
+package com.android.asus.quizgiaodien;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.AndroidException;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class MainActivity extends AppCompatActivity {
+    private ListView lv;
+    private String[] text={"C/C++","java","android","IOS"};
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        lv = (ListView) findViewById(R.id.lv_text);
+        ArrayAdapter arrayAdapter =new ArrayAdapter(this,android.R.layout.simple_list_item_1,text);
+
+        lv.setAdapter(arrayAdapter);
+    }
+}

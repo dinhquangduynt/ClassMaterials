@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script language="JavaScript">
+		function doichu(){
+          var st=document.f1.t1.value
+          document.f1.t1.value=st.toUpperCase()
+          document.f1.t2.focus()
+		}
+		function chon(){
+			var a=document.f1.t3.value
+			document.f1.s1.selectedIndex=a
+
+		}
+	</script>
+</head>
+<body onload="document.f1.t1.focus()">
+	<form name=f1>
+		<input type="text" name="t1" onblur="doichu()" >
+		<input type="text" name="t2" >
+		<br>
+		<select name="s1">
+			<option>index 0</option>
+			<option>index 1</option>
+			<option>index 2</option>
+			<option>index 3</option>
+			<option>index 4</option>
+			<option>index 5</option>
+			<option>index 6</option>
+			<option>index 7</option>
+			<option>index 8</option>
+			<option>index 9</option>
+			<option>index 10</option>
+			<option>index 11</option>
+		</select>
+		<input type="text" name="t3">
+		<input type="button" name="b1" value="OK" onclick="chon()">
+	</form>
+
+</body>
+</html>

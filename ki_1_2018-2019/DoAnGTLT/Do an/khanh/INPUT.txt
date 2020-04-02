@@ -1,0 +1,27 @@
+3
+Quang Nam
+7
+VNPT, tt, 09
+Vt, dd, 09
+mm, ac, 09
+aa a a, aaa, 03
+bb b, bb, 03
+bvvcc, b n h, 04
+mmm, b n h, 04
+Da Nang
+10
+Bach Khoa, Hoa khanh, 0977111
+Ngoai Ngu, Hoa Xuan, 09771112
+kkkk, bbbb, 09771112
+Duy Tan, Nguyen Van Linh, 09771111
+Dong A, Nguyen Van, 09771111
+Bach Khoa, Hoa khanh, 0977111
+Ngoai Ngu, Hoa Xuan, 09771112
+kkkk, bbbb, 09771112
+Duy Tan, Nguyen Van Linh, 09771111
+Dong A, Nguyen Van, 09771111
+Ha Noi
+3
+ddd, gf, 09
+kkkk, m mm, 09
+llll, i, 09

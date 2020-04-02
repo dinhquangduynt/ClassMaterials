@@ -1,0 +1,11 @@
+﻿  Lecturer.cpp
+d:\hướng đối tượng\bài tập oop\bt03\bt03\bt03\lecturer.cpp(37): warning C4018: '<': signed/unsigned mismatch
+d:\hướng đối tượng\bài tập oop\bt03\bt03\bt03\lecturer.cpp(51): warning C4018: '<': signed/unsigned mismatch
+  LopSinhHoat.cpp
+  Node.cpp
+  Person.cpp
+  SinhVien.cpp
+d:\hướng đối tượng\bài tập oop\bt03\bt03\bt03\sinhvien.cpp(57): warning C4018: '<': signed/unsigned mismatch
+  Source.cpp
+  Generating Code...
+  BT03.vcxproj -> D:\hướng đối tượng\bài tập oop\BT03\BT03\Debug\BT03.exe

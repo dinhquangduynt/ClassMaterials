@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script language="JavaScript">
+		function chuyen() {
+			var mang=document.form1.t1.value;
+	
+		   var i, cout=1,a="",b="", ng_am="";	
+		   var s= mang;   
+		    for (i = 0; i < s.length; i++) 
+		    {
+		    	  var c= s.charCodeAt(i);
+                  if(97 <= c && c <=123 )
+                  {
+                  	c-=32;
+                  	
+                  } 
+                  a+=String.fromCharCode(c);  
+                  if(c == 32 && s.charCodeAt(i+1) !=32)
+                  {
+                  	cout+=1;
+                  }
+
+            }              
+              document.form1.t2.value=a; 
+              document.form1.t5.value=cout;
+               
+
+
+            
+           var  f=a.charCodeAt(0);		    
+		    	 	f+=32;		    	
+		        b+=String.fromCharCode(f);
+
+            for (i = 1; i < a.length; i++) 
+		    {
+		    	var d=a.charCodeAt(i);
+		    	
+		    	/*if(d != 32)
+		    	{
+		    		
+		    	}*/
+		    	b+=String.fromCharCode(d);
+                //doi hoa thanh thuong
+                if(d == 32 && a.charCodeAt(i+1) !=32)
+                 {
+                   var x=a.charCodeAt(i+1);                  	 
+                   x+=32;
+                   b+=String.fromCharCode(x);
+                   i++;
+                 }     
+
+            }      
+              document.form1.t3.value=b;
+             
+            for (var i = 0; i < s.length; i++) {
+            	var m =s.charCodeAt(i);
+            	if(m == 65 || m == 69 || m == 73 || m== 79 || m == 85 || m== 97 || m== 101 || m==105 || m==111 || m==117)
+                  {
+                   ng_am+=String.fromCharCode(m);
+                  }
+               
+            	}
+
+            for(var i =0; i< ng_am.length-1; i++)
+            {
+            	var dau=ng_am.charCodeAt(i);
+                //
+                for (var j = i+1; j < ng_am.length; j++) {
+                	var thua=ng_am.charCodeAt(j);
+                 if(thua == dau || thua == (dau+32) || thua == (dau-32))
+                  {
+                  	
+                  	ng_am-=String.fromCharCode(thua);                 	
+                  }
+                }           		
+            }
+            document.form1.t4.value = ng_am;
+
+        }
+
+	</script>
+</head>
+<body>
+	<center>
+		<form name="form1" method="post" action="xulychuoi.*">
+		<table>
+			<caption style="font-size: 30px"><u>Xử Lý Chuỗi</u></caption>
+			<tr>
+				<td>Nhập chuỗi</td>
+				<td><input type="text" name="t1"></td>
+			</tr>
+
+
+			<tr>
+				<td>Chữ hoa</td>
+				<td><input type="text" name="t2"></td>
+				<td><input type="button" name="b1" value="OK" onclick="chuyen()"></td>
+			</tr>
+
+
+			<tr>
+				<td>Thường hoa</td>
+				<td><input type="text" name="t3"></td>
+				<td><input type="reset" name="b2" value="Reset"></td>
+			</tr>
+
+
+			<tr>
+				<td>Các nguyên âm</td>
+				<td><input type="text" name="t4"></td>
+			</tr>
+
+
+			<tr>
+				<td>Số từ</td>
+				<td><input type="text" name="t5"></td>
+			</tr>
+		</table>
+		
+	</form>
+	</center>
+ 
+</body>
+</html>
